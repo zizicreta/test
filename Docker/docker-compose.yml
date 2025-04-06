@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  model1:
+    image: ollama/gemma3:1b
+    ports:
+      - "8081:8080"  # 외부 포트와 내부 포트 매핑
+
+  model2:
+    image: ollama/gemma3:3b
+    ports:
+      - "8082:8080"  # 다른 모델을 위한 포트 매핑
+
+  model3:
+    image: ollama/gemma3:latest
+    ports:
+      - "8083:8080"
